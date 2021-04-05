@@ -61,4 +61,78 @@ class Solution:
             else:
                 return True
         
+
+#1450. Number of Students Doing Homework at a Given Time
+class Solution:
+    def busyStudent(self, startTime: List[int], endTime: List[int], queryTime: int) -> int: 
+        res=0
+        for i in range(len(startTime)):
+            if queryTime>=startTime[i] and queryTime<=endTime[i]:
+                res+=1
+        return res
+                
+
+
+#832. Flipping an Image
+class Solution:
+    def flipAndInvertImage(self, A: List[List[int]]) -> List[List[int]]:
+        temp=0
+        for n in A:
+            for l in range(len(n)//2):
+                if n[l]!=n[-l-1]:
+                    temp = n[l]
+                    n[l] = n[-l-1]
+                    n[-l-1] = temp
+      
+            for k in range(len(n)):
+                if n[k]==0:
+                    n[k]=1
+                else:
+                    n[k]=0
+        return A
+
+class Solution:
+    def flipAndInvertImage(self, A: List[List[int]]) -> List[List[int]]:
+        temp=0
+        for n in A:
+            n.reverse()
+            for k in range(len(n)):
+                if n[k]==0:
+                    n[k]=1
+                else:
+                    n[k]=0
+        return A
+
+
+#657. Robot Return to Origin
+class Solution:
+    def judgeCircle(self, moves: str) -> bool:
+        x=0
+        y=0
+        for m in moves:
+            if m=="U":
+                y+=1
+            elif m=="D":
+                y-=1
+            elif m=="R":
+                x+=1
+            else:
+                x-=1
         
+        if x==0 and y==0:
+            return True
+        else:
+            return False
+
+
+#1742. Maximum Number of Balls in a Box
+class Solution:
+    def countBalls(self, lowLimit: int, highLimit: int) -> int:
+        res=[0]*100
+        if lowLimit >0 and highLimit < 10:
+            return 1
+        
+        for n in range(lowLimit, highLimit+1):
+            res[sum(int(digits) for digits in str(n))] +=1
+        
+        return max(res)
