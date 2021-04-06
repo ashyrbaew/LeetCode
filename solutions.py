@@ -1,6 +1,4 @@
-### 1614. Maximum Nesting Depth
-
-```python
+#1614. Maximum Nesting Depth
 class Solution:
     def maxDepth(self, s: str) -> int:
         d = 0
@@ -13,7 +11,8 @@ class Solution:
                 d-=1
         
         return max(m)
-```
+
+
 
 #1021. Remove Outermost Parentheses
 class Solution:
