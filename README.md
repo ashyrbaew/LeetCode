@@ -2,7 +2,7 @@
 LeetCode solved problems - Python3
 
 
-## 1614. Maximum Nesting Depth
+#1614. Maximum Nesting Depth
 class Solution:
     def maxDepth(self, s: str) -> int:
         d = 0
