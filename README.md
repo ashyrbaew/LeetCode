@@ -17,10 +17,9 @@ class Solution:
                 d-=1
         
         return max(m)
-```
-/
-/
-/
+```      
+
+
 ### 1021. Remove Outermost Parentheses
 ```python
 class Solution:
