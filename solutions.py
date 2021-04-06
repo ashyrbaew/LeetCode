@@ -1,4 +1,6 @@
-#1614. Maximum Nesting Depth
+### 1614. Maximum Nesting Depth
+
+```python
 class Solution:
     def maxDepth(self, s: str) -> int:
         d = 0
@@ -11,8 +13,7 @@ class Solution:
                 d-=1
         
         return max(m)
-
-
+```
 
 #1021. Remove Outermost Parentheses
 class Solution:
@@ -136,3 +137,38 @@ class Solution:
             res[sum(int(digits) for digits in str(n))] +=1
         
         return max(res)
+
+
+
+#1460. Make Two Arrays Equal by Reversing Sub-arrays
+class Solution:
+    def canBeEqual(self, target: List[int], arr: List[int]) -> bool:
+        return sorted(target) == sorted(arr)
+
+
+
+#1337. The K Weakest Rows in a Matrix
+class Solution:
+    def kWeakestRows(self, mat: List[List[int]], k: int) -> List[int]:
+        res=[]
+        r=[]
+        for n in mat:
+            res.append(sum(n))
+        print(res)
+        for l in range(k):
+            r.append(res.index(min(res)))
+            res[res.index(min(res))]=999999
+        
+        return r
+
+
+
+#1403. Minimum Subsequence in Non-Increasing Order
+class Solution:
+    def minSubsequence(self, nums: List[int]) -> List[int]:
+        res=[]
+        nums.sort(reverse=True)
+        for n in nums:
+            res.append(n)
+            if sum(res) > sum(nums) - sum(res):
+                return res
