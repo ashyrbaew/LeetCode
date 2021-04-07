@@ -222,7 +222,7 @@ class Solution:
 
 
 
-###944. Delete Columns to Make Sorted
+### 944. Delete Columns to Make Sorted
 
 ```python
 class Solution:
