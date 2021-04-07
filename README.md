@@ -201,3 +201,21 @@ class Solution:
             if sum(res) > sum(nums) - sum(res):
                 return res
 ```
+
+
+
+1047. Remove All Adjacent Duplicates In String
+```python
+class Solution:
+    def removeDuplicates(self, S: str) -> str:
+        new_list = []
+        
+        for letter in S:
+            new_list.append(letter)
+            # if letter inserted is same as previous letter in list - remove both
+            if len(new_list) > 1 and new_list[-1] == new_list[-2]: 
+                new_list.pop()
+                new_list.pop()
+                
+        return "".join(new_list)
+```
