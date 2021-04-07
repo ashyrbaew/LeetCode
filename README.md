@@ -204,7 +204,7 @@ class Solution:
 
 
 
-1047. Remove All Adjacent Duplicates In String
+### 1047. Remove All Adjacent Duplicates In String
 ```python
 class Solution:
     def removeDuplicates(self, S: str) -> str:
@@ -218,4 +218,22 @@ class Solution:
                 new_list.pop()
                 
         return "".join(new_list)
+```
+
+
+
+###944. Delete Columns to Make Sorted
+
+```python
+class Solution:
+    def minDeletionSize(self, A: List[str]) -> int:
+        
+        res = 0
+        for pos in range(len(A[0])):
+            for word in range(len(A)-1):
+                if A[word][pos] > A[word+1][pos]:
+                    res += 1
+                    break
+        return res
+        
 ```
