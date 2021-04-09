@@ -237,3 +237,26 @@ class Solution:
         return res
         
 ```
+
+### 1122. Relative Sort Array
+```python
+class Solution:
+    def relativeSortArray(self, arr1: List[int], arr2: List[int]) -> List[int]:
+        include=[]
+        notinclude=[]
+        res=[]
+        for i in range(len(arr1)):
+            if arr1[i] in arr2:
+                include.append(arr1[i])
+            else:
+                notinclude.append(arr1[i])
+                
+        for i in arr2:
+            for j in include:
+                if i==j:
+                    res.append(j)
+        
+        # include.sort()
+        notinclude.sort()
+        return res+notinclude
+```
