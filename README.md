@@ -260,3 +260,23 @@ class Solution:
         notinclude.sort()
         return res+notinclude
 ```
+
+
+
+### 1217. Minimum Cost to Move Chips to The Same Position
+```python
+class Solution:
+    def minCostToMoveChips(self, position: List[int]) -> int:
+        odd,even = 0, 0
+        
+        for i in position:
+            if i%2==0:
+                even+=1
+            else:
+                odd+=1
+        
+        if even>odd:
+            return odd
+        else:
+            return even
+```
