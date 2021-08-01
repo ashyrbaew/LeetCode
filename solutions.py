@@ -171,3 +171,48 @@ class Solution:
             res.append(n)
             if sum(res) > sum(nums) - sum(res):
                 return res
+
+
+
+
+
+
+#13. Roman to Integer (slow 7%)
+
+class Solution:
+    def romanToInt(self, s: str) -> int:
+        rn = [
+                ('M', 1000),
+                ('CM', 900),
+                ('D', 500),
+                ('CD', 400),
+                ('C', 100),
+                ('XC', 90),
+                ('L', 50),
+                ('XL', 40),
+                ('X', 10),
+                ('IX', 9),
+                ('V', 5),
+                ('IV', 4),
+                ('I', 1)
+            ]
+        
+        check = 'CMCDXCXLIXIV'
+        res=0
+        for i in range(len(s)):
+            if s[i:i+2] in check and len(s[i:i+2]) >1:
+                for j in rn:
+                    if j[0]==s[i:i+2]:
+                        res+=j[1]
+                        s=s.replace(s[i:i+2],"0")
+                        
+        for i in reversed(range(len(s))):
+            for j in rn:
+                if s[i]==j[0]:
+                    res+=j[1]
+        
+        return res
+
+
+
+
