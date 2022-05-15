@@ -5,7 +5,21 @@ LeetCode solved problems - Python3
 > ###### May 15  - 2022
 
 
-
+### [28. Implement strStr()](https://leetcode.com/problems/implement-strstr/) 
+```python
+class Solution:
+    def strStr(self, haystack: str, needle: str) -> int:
+        
+        if not needle:
+            return 0
+        
+        if needle in haystack:
+            for i,j in enumerate(haystack):
+                if haystack[i:i+len(needle)] == needle:
+                    return i
+        else:
+            return -1
+```
 
 
 ### [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) 
@@ -24,7 +38,6 @@ class Solution:
                 
         return not stack
 ```
-
 
 
 
