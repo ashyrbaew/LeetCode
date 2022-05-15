@@ -4,6 +4,13 @@ LeetCode solved problems - Python3
 
 > ###### May 15  - 2022
 
+### [58. Length of last word](https://leetcode.com/problems/length-of-last-word/) 
+```python
+class Solution:
+    def lengthOfLastWord(self, s: str) -> int:
+        return len(s.split()[-1])
+```
+
 
 ### [35. Search Insert Position](https://leetcode.com/problems/search-insert-position/) 
 ```python
