@@ -5,6 +5,17 @@ LeetCode solved problems - Python3
 > ###### May 15  - 2022
 
 
+### [35. Search Insert Position](https://leetcode.com/problems/search-insert-position/) 
+```python
+class Solution:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        for i in range(len(nums)):
+            if nums[i] >= target:
+                return i
+        return len(nums)
+```
+
+
 ### [28. Implement strStr()](https://leetcode.com/problems/implement-strstr/) 
 ```python
 class Solution:
