@@ -4,15 +4,13 @@ class Solution:
         stack = []
         par={"}":"{", "]":"[", ")":"("}
 
-        for i,j in enumerate(s):
-            print(i, stack)
-            if j in par:
-                if not stack or stack.pop() != par[j]:
+        for char in s:
+            if char in par:
+                if not stack or stack.pop() != par[char]:
                     return False
             else:
-                stack.append(j)
+                stack.append(char)
 
-        print("test", stack)
         return not stack
 
 test = Solution()

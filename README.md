@@ -3,6 +3,11 @@ LeetCode solved problems - Python3
 
 
 > ###### May 15  - 2022
+
+
+
+
+
 ### [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) 
 ```python
 class Solution:
@@ -10,15 +15,13 @@ class Solution:
         stack = []
         par={"}":"{", "]":"[", ")":"("}
 
-        for i,j in enumerate(s):
-            print(i, stack)
-            if j in par:
-                if not stack or stack.pop() != par[j]:
+        for char in s:
+            if char in par:
+                if not stack or stack.pop() != par[char]:
                     return False
             else:
-                stack.append(j)
-
-        print("test", stack)
+                stack.append(char)
+                
         return not stack
 ```
 
