@@ -4,7 +4,7 @@ LeetCode solved problems - Python3
 > ###### May 16  - 2022
 
 
-### [58. Length of last word](https://leetcode.com/problems/length-of-last-word/) 
+### [27. Remove Element](https://leetcode.com/problems/remove-element/) 
 ```python
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
