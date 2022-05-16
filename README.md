@@ -1,6 +1,24 @@
 # LeetCode
 LeetCode solved problems - Python3
 
+> ###### May 16  - 2022
+
+
+### [58. Length of last word](https://leetcode.com/problems/length-of-last-word/) 
+```python
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        n = 0
+        while n < len(nums):
+            if nums[n] == val:
+                del nums[n]
+                n -= 1
+          
+            n+= 1
+                
+        return len(nums)
+```
+
 
 > ###### May 15  - 2022
 
