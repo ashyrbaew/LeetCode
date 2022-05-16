@@ -3,6 +3,21 @@ LeetCode solved problems - Python3
 
 > ###### May 16  - 2022
 
+### [66. Plus One](https://leetcode.com/problems/plus-one/) 
+```python
+class Solution:
+    def plusOne(self, digits: List[int]) -> List[int]:
+        res=""
+        k=[]
+        for i in digits:
+            res+=str(i)
+        
+        for i in str(int(res)+1):
+            k.append(int(i))
+            
+        return k
+```
+
 
 ### [27. Remove Element](https://leetcode.com/problems/remove-element/) 
 ```python
