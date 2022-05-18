@@ -3,6 +3,13 @@ LeetCode solved problems - Python3
 
 > ###### May 18  - 2022
 
+### [136. Single Number](https://leetcode.com/problems/single-number/)
+```python
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        return reduce(lambda x, y: x ^ y, nums)
+```
+
 
 ### [67. Add Binary](https://leetcode.com/problems/add-binary/) 
 ```python
