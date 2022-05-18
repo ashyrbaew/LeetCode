@@ -1,8 +1,34 @@
 # LeetCode
 LeetCode solved problems - Python3
 
-> ###### May 16  - 2022
+> ###### May 18  - 2022
 
+
+### [69. Sqrt(x)](https://leetcode.com/problems/sqrtx/) 
+```python
+class Solution:
+    def mySqrt(self, x: int) -> int:
+        return int(sqrt(x))
+```
+
+
+### [66. Plus One](https://leetcode.com/problems/plus-one/) 
+```python
+class Solution:
+    def plusOne(self, digits: List[int]) -> List[int]:
+        res=""
+        k=[]
+        for i in digits:
+            res+=str(i)
+        
+        for i in str(int(res)+1):
+            k.append(int(i))
+            
+        return k
+```
+
+
+> ###### May 16  - 2022
 
 
 ### [66. Plus One](https://leetcode.com/problems/plus-one/) 
