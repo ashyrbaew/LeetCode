@@ -3,6 +3,7 @@ LeetCode solved problems - Python3
 
 > ###### May 18  - 2022
 
+
 ### [136. Single Number](https://leetcode.com/problems/single-number/)
 ```python
 class Solution:
