@@ -1,7 +1,7 @@
 import pdb
 class Solution:
     def isValid(self, s):
-        stack = []
+        tack = []
         par={"}":"{", "]":"[", ")":"("}
 
         for char in s:
