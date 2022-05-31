@@ -1,8 +1,26 @@
 # LeetCode
 LeetCode solved problems - Python3
 
-> ###### May 3  - 2022
 
+> ###### June 1  - 2022
+
+
+### [83. Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)
+```python
+class Solution:
+    def deleteDuplicates(self, head: ListNode) -> ListNode:        
+        if head:
+            current = head
+            while current.next:
+                if current.next.val == current.val:
+                    current.next = current.next.next
+                else:
+                    current = current.next
+        return head
+```
+
+
+> ###### May 31  - 2022
 
 ### [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
 ```python
