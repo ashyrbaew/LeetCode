@@ -4,6 +4,21 @@ LeetCode solved problems - Python3
 
 > ###### June 1  - 2022
 
+[### [88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
+```python
+class Solution:
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        """
+        Do not return anything, modify nums1 in-place instead.
+        """
+        if m < 0:
+            return nums1.extend(nums2)
+        else:
+            del nums1[m:]
+            nums1.extend(nums2)
+            return nums1.sort()
+```]
+
 
 ### [83. Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)
 ```python
