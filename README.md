@@ -1,6 +1,23 @@
 # LeetCode
 LeetCode solved problems - Python3
 
+> ###### May 3  - 2022
+
+
+### [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
+```python
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        
+        k,l=1,1
+        for i in range(n-1):
+            temp = k
+            k = k + l
+            l = temp
+        
+        return k
+```
+
 > ###### May 18  - 2022
 
 
