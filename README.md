@@ -3,6 +3,24 @@ LeetCode solved problems - Python3
 
 
 > ###### June 1  - 2022
+> 
+> 
+[### [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+```python
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        
+        max_price=0
+        min_price=1000000
+        
+        for i,j in enumerate(prices):
+            max_price = max( max_price, j-min_price)
+            min_price = min( min_price, j)
+        
+        return max_price
+            
+```
+
 
 [### [88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
 ```python
@@ -17,7 +35,7 @@ class Solution:
             del nums1[m:]
             nums1.extend(nums2)
             return nums1.sort()
-```]
+```
 
 
 ### [83. Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)
