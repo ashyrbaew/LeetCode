@@ -2,6 +2,30 @@
 LeetCode solved problems - Python3
 
 
+> ###### Jul 30  - 2022
+
+
+[### [94. Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def inorderTraversal(self, node: TreeNode) -> List[int]:
+        if node is None:
+            return []
+
+        left_children = self.inorderTraversal(node.left)
+        right_children = self.inorderTraversal(node.right)
+
+        return [*left_children, node.val, *right_children]
+```
+
+
+
 > ###### June 1  - 2022
 
 
