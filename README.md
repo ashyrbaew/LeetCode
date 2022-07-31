@@ -82,7 +82,7 @@ class Solution:
         )
 ```
 
-[### [104. Maximum Depth of Binary Tree ](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
+### [104. Maximum Depth of Binary Tree ](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
 ```python
 # Definition for a binary tree node.
 # class TreeNode:
