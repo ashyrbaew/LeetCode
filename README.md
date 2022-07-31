@@ -4,7 +4,68 @@ LeetCode solved problems - Python3
 > ###### Jul 31  - 2022
 
 
+[### [104. Maximum Depth of Binary Tree ](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def maxDepth(self, root: Optional[TreeNode]) -> int:
+        if root is None:return 0
+        return max(self.maxDepth(root.left), self.maxDepth(root.right)) + 1
+```
 
+
+[### [101. Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def isSymmetric(self, root: Optional[TreeNode]) -> bool:
+        
+        def isMirror(lefttree,righttree):
+            if lefttree == None and righttree == None:
+                return True
+            
+            if lefttree is not None and righttree is not None:
+                if lefttree.val == righttree.val:
+    
+                    return isMirror(lefttree.left,righttree.right) and isMirror(lefttree.right,righttree.left)
+    
+            return False
+        
+        return isMirror(root,root)
+```
+
+
+[### [100. Same Tree](https://leetcode.com/problems/same-tree/)
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def isSameTree(self, p, q):
+        if p==None and q==None:
+            return True
+        if p==None or q==None:
+            return False
+        
+        if p.val != q.val:
+            return False
+        
+        return self.isSameTree(p.right, q.right) and self.isSameTree(p.left, q.left)
+        
+```
 
 
 > ###### Jul 30  - 2022
@@ -28,7 +89,6 @@ class Solution:
 
         return [*left_children, node.val, *right_children]
 ```
-
 
 
 > ###### June 1  - 2022
