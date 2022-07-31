@@ -123,7 +123,7 @@ class Solution:
 ```
 
 
-[### [100. Same Tree](https://leetcode.com/problems/same-tree/)
+### [100. Same Tree](https://leetcode.com/problems/same-tree/)
 ```python
 # Definition for a binary tree node.
 # class TreeNode:
