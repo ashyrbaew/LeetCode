@@ -3,6 +3,7 @@ LeetCode solved problems - Python3
 
 > ###### Jul 31  - 2022
 
+
 ### [112. Path Sum](https://leetcode.com/problems/path-sum/)
 ```python
 # Definition for a binary tree node.
