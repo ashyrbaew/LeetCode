@@ -3,6 +3,31 @@ LeetCode solved problems - Python3
 
 > ###### Jul 31  - 2022
 
+[### [112. Path Sum](https://leetcode.com/problems/path-sum/)
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
+        if root is None:
+            return False
+        
+        if root.left is None and root.right is None:
+            return root.val == targetSum
+        
+        targetSum = targetSum - root.val 
+        
+        return (
+            self.hasPathSum(root.left, targetSum) or
+            self.hasPathSum(root.right, targetSum)
+        )
+        
+```
+
 
 [### [111. Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)
 ```python
