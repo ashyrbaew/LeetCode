@@ -3,6 +3,29 @@ LeetCode solved problems - Python3
 
 > ###### Jul 31  - 2022
 
+[### [108. Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def sortedArrayToBST(self, nums: List[int]) -> Optional[TreeNode]:        
+        if len(nums) == 1:
+            return TreeNode(val=nums[0])
+        if len(nums) == 0:
+            return None
+
+        m = len(nums)//2
+
+        return TreeNode(
+            val=nums[m],
+            left=self.sortedArrayToBST(nums[:m]),
+            right=self.sortedArrayToBST(nums[m+1:])
+        )
+```
 
 [### [104. Maximum Depth of Binary Tree ](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
 ```python
