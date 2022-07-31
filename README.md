@@ -97,7 +97,7 @@ class Solution:
 ```
 
 
-[### [101. Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)
+### [101. Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)
 ```python
 # Definition for a binary tree node.
 # class TreeNode:
