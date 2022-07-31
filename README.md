@@ -3,6 +3,36 @@ LeetCode solved problems - Python3
 
 > ###### Jul 31  - 2022
 
+
+[### [111. Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def minDepth(self, root: Optional[TreeNode]) -> int:
+        
+        if root==None: return 0
+        mindepth = []
+        depth=1
+        
+        def dfs(node, depth):
+            if node is None:
+                return depth
+            if node.left==None and node.right==None:
+                mindepth.append(depth)
+            dfs(node.left, depth +1)
+            dfs(node.right, depth +1) 
+        
+        
+        dfs(root, depth)
+        
+        return min(mindepth)
+```
+
 [### [108. Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)
 ```python
 # Definition for a binary tree node.
