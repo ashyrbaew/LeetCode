@@ -149,7 +149,7 @@ class Solution:
 > ###### Jul 30  - 2022
 
 
-[### [94. Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)
+### [94. Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)
 ```python
 # Definition for a binary tree node.
 # class TreeNode:
@@ -172,7 +172,7 @@ class Solution:
 > ###### June 1  - 2022
 
 
-[### [125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
+### [125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
 ```python
 class Solution:
     def isPalindrome(self, s: str) -> bool:
@@ -181,7 +181,7 @@ class Solution:
 ```
 
 
-[### [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+### [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 ```python
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
@@ -198,7 +198,7 @@ class Solution:
 ```
 
 
-[### [88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
+### [88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
 ```python
 class Solution:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
